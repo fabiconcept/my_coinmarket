@@ -1,0 +1,229 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* :root{
+  --filter: invert();
+  --back: rgb(12, 19, 36);
+  --t-color: #fff;
+  --tp-color: rgba(255, 255, 255, 0.904);
+} */
+
+.app{
+  background-color: var(--back);
+  color: var(--t-color);
+  transition: 1s ease-in-out;
+}
+
+.preload{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  transition: .5s ease-in-out;
+  z-index: 2000;
+  background-color: #fff;
+  left: 0;
+}
+
+.leave{
+  display: none; 
+}
+
+.pImg{
+  height: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  margin-top: -2rem;
+  overflow: hidden;
+}
+
+.pImg img{
+  width: 250%;
+  margin-top: -4rem;
+}
+
+.navArea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border: 1px solid rgba(184, 189, 206, 0.359);
+}
+
+.navArea .logo img{  
+  width: 10rem;
+  filter: var(--filter);
+}
+
+.navArea .textBox{
+  padding: 10px 1rem;
+  border: none;
+  background-color: rgba(184, 189, 206, 0.459);
+  border-radius: .5rem;
+  font-size: .75rem;
+  color: var(--t-color);
+  width: 16.5rem;
+  outline: none;
+}
+
+.navArea .textBox::placeholder{
+  color: var(--tp-color);
+}
+
+.midCard{
+  padding: .5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  margin: 0 .8rem;
+}
+
+.midCard .spanCard{
+  border: 1px solid rgba(184, 189, 206, 0.19);
+  box-shadow: 0 0 15px rgba(184, 189, 206, 0.1);
+  border-radius: .4rem;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  padding: .5rem;
+  align-items: center;
+}
+
+.midCard .spanCard:hover{
+  box-shadow: 0 0 15px rgba(184, 189, 206, 0.3);
+}
+
+.midCard .spanCard img{
+  width: 5rem;
+  margin-right:1rem;
+  margin-left: -10px;
+}
+
+.midCard .spanCard .text{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  justify-content: center;
+}
+
+.trending{
+  padding: .5rem;
+  display: flex;
+  margin-top: -5px;
+  align-content: center;
+  overflow-x: auto;
+  gap: 10px; 
+}
+
+.trending .trendingCard{
+  display: flex;
+  border: 1px solid rgba(184, 189, 206, 0.19);
+  box-shadow: 0 0 15px rgba(184, 189, 206, 0.1); 
+  min-width: 25rem;
+  width: 25rem;
+  border-radius: .4rem;
+  justify-content: center;
+  cursor: pointer;
+  padding: .5rem;
+  gap: 15px;
+  align-items: center;
+}
+
+.trending .trendingCard:hover{
+  background-color: rgba(184, 189, 206, 0.19);
+}
+
+.trending .trendingCard img{
+  width: 1rem;
+}
+.trending .trendingCard .text {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.trending .trendingCard .text .status{
+  display: flex; 
+  gap: 10px;
+  align-items: center;
+  font-size: .8rem;
+}
+
+.trending .trendingCard .text .status span{
+  font-weight: 600;
+}
+
+.MainList{
+  padding: .5rem;
+  overflow-x: auto;
+}
+
+table{
+  width: 98%;
+  margin: 0 auto;
+  overflow-x: auto;
+  border: 1px solid rgba(184, 189, 206, 0.1);
+  font-size: .85rem;
+}
+tr{
+  border: 1px solid rgba(184, 189, 206, 0.459);
+}
+
+tr:hover{
+  background-color: rgba(184, 189, 206, 0.159);
+}
+tr:active{
+  background-color: rgba(184, 189, 206, 0.259);
+}
+td{
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid rgba(184, 189, 206, 0.459);
+  text-align: right;
+}
+.ted{
+  width: 95vw;
+  overflow: hidden;
+  
+  margin: 0 auto;
+}
+
+.coinInfoMini{
+  display: flex;
+  gap: 10px;
+  justify-content: left;
+  align-items: center;
+}
+
+.coinInfoMini img{
+  height: 1.5rem;
+}
+
+.coinInfoMini .text{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  text-align: left;
+  gap: 10px;
+}
+
+.up{
+  color: rgb(20, 238, 20);
+}
+
+.loss{
+  color: rgb(238, 71, 20);
+}
+.watch{
+  color: gold;
+}

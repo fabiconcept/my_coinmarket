@@ -1,0 +1,65 @@
+
+@media screen and (max-width: 900px) {
+    body{
+      overflow-x: hidden;
+    }
+    .navArea {
+      width: 100vw;
+    }
+    .navArea .logo img{
+      width: 7rem;
+    }
+    .midCard{
+      padding: 0;
+      margin: 0 auto;
+      width: 95vw;
+      grid-template-columns: 1fr 1fr;
+    }   
+    .navArea .textBox{
+      padding: 10px .5rem;
+      width: 10.5rem;
+    }
+    .midCard .spanCard:hover{
+      background-color: rgba(184, 189, 206, 0.05);
+    }
+    .midCard .spanCard{
+      width: 100%;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .midCard .spanCard img{
+      width: 5rem;
+      opacity: .2;
+      margin-left: 1rem;
+    }
+    .midCard .spanCard .text{
+      position: absolute;
+    }
+    .MainList{
+      width: 98vw;
+    }
+    .trending{
+      width: 98vw;
+      margin: 0 auto;
+      padding: 0;
+    }
+    .dsk{
+      display: none;
+    }
+    .ted{
+      width: 90vw;
+      margin: 0 auto;
+    }
+  } 
+  @keyframes pre {
+    0%{
+      top: 0%;
+      opacity: 1;
+    }
+    100%{
+      top: -100%;
+      opacity: 0;
+    }
+  }
