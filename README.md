@@ -10,6 +10,9 @@ I chose this project specifically because of the challenges i faced while buildi
 
 i hope i encounter 1000 bugs 🐞🐞
 
+##View Site
+
+https://62dc64e34c2bea5ce0aabbf0--regal-semifreddo-191fec.netlify.app/view/fantom
 
 ## API Reference
 
