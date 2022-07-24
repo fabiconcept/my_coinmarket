@@ -12,6 +12,7 @@ const Trending = () => {
         {data && data.map(item => (
           <TrendingCard
             key={item.item.coin_id}
+            id={item.item.id}
             logo={item.item.large}
             name={item.item.name}
             symbol={item.item.symbol}

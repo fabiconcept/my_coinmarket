@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const CardMain = ({ image, current_price, name }) => {
     function formatMoney(n) {
@@ -7,13 +8,13 @@ const CardMain = ({ image, current_price, name }) => {
 
     let money = formatMoney(current_price);
     return (
-        <div className="spanCard">
+        <Link to={`/view/${name.toLowerCase()}`} className="spanCard">
             <img src={image} alt="" />
             <div className="text">
                 <p className="h5 pt-3">{name}</p>
                 <p style={{ marginTop: "-5px" }}>₦ {money}</p>
             </div>
-        </div>
+        </Link>
     )
 }
 

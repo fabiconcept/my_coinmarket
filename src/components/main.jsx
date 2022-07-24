@@ -12,7 +12,7 @@ const MainList = () => {
             <table>
                 <thead>
                     <tr style={{ borderBottom: "1px solid rgba(184, 189, 206, 0.459)", borderTop: "1px solid rgba(184, 189, 206, 0.459)" }}>
-                        <td style={{ fontWeight: "600" }}></td>
+                        {/* <td style={{ fontWeight: "600" }}></td> */}
                         <td style={{ fontWeight: "600" }}>#</td>
                         <td style={{ fontWeight: "600", textAlign: "left" }}>Name</td>
                         <td style={{ fontWeight: "600" }}>Price</td>
@@ -28,6 +28,7 @@ const MainList = () => {
                     {data && data.map(item=>(
                         <SingleCard
                             key={item.id}
+                            id={item.id}
                             name={item.name}
                             image={item.image}
                             symbol={item.symbol}

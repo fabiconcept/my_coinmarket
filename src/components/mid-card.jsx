@@ -13,7 +13,7 @@ const MidCard = () => {
         {data && data.map(item=>(
           <CardMain 
             key={item.name}
-            name={item.name}
+            name={item.name} 
             current_price={item.current_price}
             image={item.image}
           />

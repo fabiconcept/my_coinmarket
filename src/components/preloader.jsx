@@ -14,7 +14,7 @@ const Preloader = () => {
     return (
         <div id='pre' className={`preload ${clist}`} style={{animation: ` ${cl}`}}>
             <div className="pImg">
-                <img src="img/preload.gif" alt="" />
+                <img src="https://icons8.com/preloaders/preloaders/1475/Skateboarding.gif" alt="" />
             </div>
         </div>
     )

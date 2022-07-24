@@ -1,6 +1,8 @@
+import { chartAction } from "../slices/chartDataSlice";
 import { CreateList } from "../slices/listingSlice";
 import { searchListAction } from "../slices/searchListSlice";
 import { trendAction } from "../slices/trendingSlice";
+import { viewAction } from "../slices/viewSlice";
 
 const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=ngn&order=market_cap_desc&per_page=100&page=1&sparkline=false";
 
@@ -64,6 +66,48 @@ export const fetchTrend = () => {
             dispatch(trendAction.createTrend({trendList: response}));
         } catch (error) {
             console.log(error.message)
+        }
+    }
+}
+
+
+export const fetchViewMain = (ele) =>{
+    const urlViewMain = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=ngn&ids=${ele.toLowerCase()}&order=market_cap_desc&page=1&sparkline=false&price_change_percentage=1`;
+    return async(dispatch) =>{
+        const fetchData = async() =>{
+            const res = await fetch(urlViewMain);
+            const data = res.json();
+            return data;
+        }
+        try {
+            const response = await fetchData();
+            dispatch(viewAction.addTodata({data: response}))
+            dispatch(viewAction.updateLoad({load: true}))
+        } catch (error) {
+            dispatch(viewAction.updateLoad({load: true}))
+            dispatch(viewAction.catchErr({error: error.message}))
+            
+        }
+    }
+}
+
+export const fetchChartData = (ele) =>{
+    const urlChart = `https://api.coingecko.com/api/v3/coins/${ele}/market_chart?vs_currency=ngn&days=1&interval=minute`;
+    return async(dispatch)=>{
+        const fetchData = async()=>{
+            const res = await fetch(urlChart);
+            const data = res.json();
+            return data;
+        }
+
+        try {
+            const response = await fetchData();
+            dispatch(chartAction.createData({data: response}));
+            dispatch(chartAction.setLoad({isLoad: true}));
+        } catch (error) {
+            console.log(error.message);
+            dispatch(chartAction.setLoad({isLoad: true}))
+            dispatch(chartAction.setError({err: error.message}))
         }
     }
 }

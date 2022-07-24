@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
-const TrendingCard = ({name, price, symbol, score, logo}) => {
+const TrendingCard = ({name, price, symbol, score, logo, id}) => {
 
   let spl = name.split(" ");
   let word;
@@ -13,7 +14,7 @@ const TrendingCard = ({name, price, symbol, score, logo}) => {
       break;
   }
   return (
-    <div className="trendingCard">
+    <Link to={`/view/${id}`} className="trendingCard">
         <img src={`${logo}`} alt="" />
         <div className="text">
             <div className="status">
@@ -22,7 +23,7 @@ const TrendingCard = ({name, price, symbol, score, logo}) => {
                 <div className="rank_price"><span>Price</span>: {(price).toFixed(10)}</div>
             </div>
         </div>
-    </div>
+    </Link>
   )
 }
 
