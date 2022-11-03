@@ -1,0 +1,202 @@
+@media screen and (max-width: 900px) {
+  .chart-con {
+    display: grid;
+    width: 100vw;
+    margin: 1rem auto;
+    padding: 0 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .market {
+    display: grid;
+    border: 1px solid rgba(184, 189, 206, 0.259);
+    grid-template-columns: 1fr;
+    border-radius: .5rem;
+  }
+
+  .bold {
+    font-size: 1.55rem;
+    font-weight: 450;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+  }
+
+  .infoCard .top .right .data span {
+    padding: .2rem .5rem;
+    border-radius: .4rem;
+    color: #fff;
+    font-weight: 500;
+    font-size: .6rem;
+  }
+
+  .infoCard .top {
+    display: flex;
+    padding: 1rem 0 2rem 0;
+    align-items: flex-start;
+    gap: 25px;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .infoCard .top .right {
+    font-size: .75rem;
+    height: fit-content;
+    width: 100%;
+    text-align: left;
+    margin-bottom: -33px;
+  }
+
+  .infoCard .top .right .data {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .converter {
+    display: grid;
+    position: relative;
+    border-radius: .6rem;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    margin: 0 0 1rem 0;
+  }
+
+
+  .sideInfo li .tagInfo {
+    font-weight: 430;
+    font-size: .8rem;
+  }
+
+  .sideInfo li .tag {
+    opacity: .8;
+    font-size: .8rem;
+  }
+
+  .chart {
+    width: 98%;
+  }
+
+  .converter div .con_inp {
+    background-color: transparent;
+    border: none;
+    font-size: 1.25rem;
+    flex: 1;
+    margin: 0 10px 0 0;
+    max-width: 10rem;
+  }
+
+  .converter .con-txt img {
+    height: 1.5rem;
+    border-radius: 25%;
+  }
+
+  .h-nom {
+    font-size: 1.1rem;
+  }
+
+  .h-nom:first-child {
+    font-weight: 600;
+  }
+
+  .market .cap {
+    width: 100%;
+    padding: 1.55rem;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(184, 189, 206, 0.259);
+    border-right: none;
+  }
+
+  .market .cap section:first-child {
+    margin-bottom: 3rem;
+  }
+
+  .market .cap:last-child {
+    border: none;
+  }
+
+  .market .cap .h6:nth-child(1) {
+    opacity: .6;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .navArea {
+    width: 100vw;
+  }
+
+  .navArea .logo img {
+    width: 7rem;
+  }
+
+  .midCard {
+    padding: 0;
+    margin: 0 auto;
+    width: 95vw;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .navArea .textBox {
+    padding: 10px .5rem;
+    width: 8.5rem;
+  }
+
+  .midCard .spanCard:hover{
+    box-shadow: 0 0 15px rgba(184, 189, 206, 0.2);
+    background-color: rgba(255, 255, 255, .4);
+    margin-bottom: .15rem;
+  }
+
+  .midCard .spanCard {
+    width: 100%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .midCard .spanCard img {
+    width: 5rem;
+    opacity: .2;
+    margin-left: 1rem;
+  }
+
+  .midCard .spanCard .text {
+    position: absolute;
+  }
+
+  .MainList {
+    width: 98vw;
+  }
+
+  .trending {
+    width: 98vw;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .dsk {
+    display: none;
+  }
+
+  .ted {
+    width: 90vw;
+    margin: 0 auto;
+  }
+}
+
+@keyframes pre {
+  0% {
+    top: 0%;
+    opacity: 1;
+  }
+
+  100% {
+    top: -100%;
+    opacity: 0;
+  }
+
+}
