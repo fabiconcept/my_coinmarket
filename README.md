@@ -12,7 +12,7 @@ i hope i encounter 1000 bugs 🐞🐞
 
 ## View Site
 
-https://regal-semifreddo-191fec.netlify.app/
+https://sparkly-fox-4bd131.netlify.app/
 
 ## API Reference
 
