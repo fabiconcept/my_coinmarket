@@ -11,7 +11,6 @@ import { fetchChartData, fetchViewMain } from '../store/thunk/fetchList';
 
 const View = () => {
     const dispatch = useDispatch();
-    const date = new Date().getDay();
     const { id } = useParams();
 
     const [userData, setUserData] = useState({

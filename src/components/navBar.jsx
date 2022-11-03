@@ -1,6 +1,4 @@
 import React from 'react';
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import Suggestion from '../extra/suggestion';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';

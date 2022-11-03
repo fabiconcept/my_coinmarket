@@ -105,13 +105,16 @@ body::-webkit-scrollbar{
   border-radius: .4rem;
   display: flex;
   justify-content: center;
+  transition: .2s ease-in-out;
   cursor: pointer;
   padding: .5rem;
   align-items: center;
 }
 
 .midCard .spanCard:hover{
-  box-shadow: 0 0 15px rgba(184, 189, 206, 0.3);
+  box-shadow: 0 0 15px rgba(184, 189, 206, 0.2);
+  background-color: rgba(255, 255, 255, .5);
+  margin-bottom: .15rem;
 }
 
 .midCard .spanCard img{
@@ -399,6 +402,8 @@ a, a:link, a:visited, a:hover, a:active{
   display: grid;
   position: relative;
   border-radius: .6rem;
+  gap: 3px;
+  max-width: 100%;
   border: var(--border);
   margin: 1.5rem 20px 2rem 0;
 }
@@ -406,20 +411,31 @@ a, a:link, a:visited, a:hover, a:active{
 .converter > *{
   display: flex;
   gap: 10px;
-  flex-basis: .5fr 1fr;
   width: 100%;
   background-color: rgba(0, 0, 0, .03);
   padding: 10px;
+  justify-content: space-between;
   align-items: center;
 }
-.converter > div:first-child{
-  border-bottom: var(--border);
+
+.converter div{
+  transition: .5s ease-in-out;
+  opacity: .8;
 }
+
+.converter .main{
+  background-color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+  opacity: 1;
+}
+
 .converter div .con-txt{
   display: flex;
   gap: 10px;
   font-size: .9rem;
+  transition: .2s ease-in-out;
   margin: 0 20px;
+  width: 100%;
   align-items: center;
 }
 
@@ -434,12 +450,17 @@ a, a:link, a:visited, a:hover, a:active{
   color: var(--t-color);
   flex: 1;
   margin: 0 10px 0 0;
+  transition: .2s ease-in-out;
   text-align: right;
-  max-width: 100%;
-  min-width: 65%;
   outline: none;
   height: 5rem;
 }
+
+.converter .main .con_inp{
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
 .con_inp::-webkit-outer-spin-button, .converter div .con_inp::-webkit-inner-spin-button{
   -webkit-appearance: none;
   margin: 0;
@@ -515,6 +536,7 @@ a, a:link, a:visited, a:hover, a:active{
   position: absolute;
   color: var(--t-color);
   right: 0;
+  transition: .2s ease-in-out;
   margin-right: 1.5rem;
   width: 16.5rem;
   z-index: 10;
@@ -524,6 +546,20 @@ a, a:link, a:visited, a:hover, a:active{
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   background-color: var(--sug);
   overflow: auto;
+}
+
+.suggest .empty{
+  cursor: default;
+  background-color: transparent;
+  display: flex;
+  font-size: .8rem;
+  color: rgb(255, 0, 76);
+  align-content: center;
+  justify-content: center;
+}
+
+.suggest .empty:hover{
+  background-color: transparent;
 }
 
 .suggest::-webkit-scrollbar{

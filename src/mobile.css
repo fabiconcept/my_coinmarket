@@ -144,8 +144,10 @@
     width: 8.5rem;
   }
 
-  .midCard .spanCard:hover {
-    background-color: rgba(184, 189, 206, 0.05);
+  .midCard .spanCard:hover{
+    box-shadow: 0 0 15px rgba(184, 189, 206, 0.2);
+    background-color: rgba(255, 255, 255, .4);
+    margin-bottom: .15rem;
   }
 
   .midCard .spanCard {

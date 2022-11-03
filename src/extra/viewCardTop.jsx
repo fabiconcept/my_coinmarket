@@ -1,5 +1,5 @@
 import React from 'react';
-import { faAngleUp, faAngleDown, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const ViewCardTop = ({name, symbol,image, current_price, market_cap_rank, price_change_24h}) => {
     function formatMoney(n) {

@@ -29,7 +29,7 @@ const Converter = ({ symbol, name, current_price, image }) => {
 
     return (
         <section className="converter">
-            <div className="convert-from">
+            <div className={`convert-from ${!main && "main"}`}>
                 <div className="con-txt">
                     <img src={image} alt="" />
                     <span>
@@ -39,7 +39,7 @@ const Converter = ({ symbol, name, current_price, image }) => {
                 </div>
                 {!main ? <input type="number" placeholder={`Amount of ${(symbol).toUpperCase()}`} onChange={(e)=>setBtc(e.target.value)} value={btc} className="con_inp" /> : <input type="text" placeholder={`Amount of ${(symbol).toUpperCase()}`} onChange={(e)=>setBtc(e.target.value)} disabled value={btc} className="con_inp" />}
             </div>
-            <div className="convert-to">
+            <div className={`convert-to ${main && "main"}`}>
                 <div className="con-txt">
                     <img src="../img/NGN.svg" alt="" />
                     <span>
@@ -51,7 +51,7 @@ const Converter = ({ symbol, name, current_price, image }) => {
             </div>
             <div className="sort" onClick={()=>setMain(!main)}>
                 <img src="../img/sort.png" alt="" />
-            </div>
+            </div> 
         </section>
     )
 }
